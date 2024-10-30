@@ -1,13 +1,24 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ComponentRef, ContentChild, ElementRef, TemplateRef, ViewChild } from "@angular/core";
+
+
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-component',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    
 })
-export class AppComponent {
-  title = 'projectCourse';
-}
+export class AppComponent{
+    public contentPanels: Array<string> = ['js', 'css', 'Angular', 'React', 'html']
+    constructor()
+    {};
+
+    ngOnInit(){
+    };
+
+    ngAfterViewChecked() {
+    };
+    ngAfterContentInit() {
+    };
+
+};
