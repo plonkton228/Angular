@@ -9,7 +9,7 @@ import { Component, ComponentRef, ContentChild, ElementRef, TemplateRef, ViewChi
     
 })
 export class AppComponent{
-    public contentPanels: Array<string> = ['js', 'css', 'Angular', 'React', 'html']
+    public contentPanels: Array<string> = ['js', 'css', 'Angular', 'React', 'html'];
     constructor()
     {};
 

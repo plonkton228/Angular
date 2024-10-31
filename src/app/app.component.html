@@ -1,7 +1,15 @@
 <div>
     Hello Angular
-    <item>
-        <icon #icon></icon>
-        <div #item>Контент</div>
-    </item>
+    <card>
+         <icon 
+         path="assets/rayn.png"
+         >
+         </icon>
+     
+          <panel
+          *ngFor="let panel of contentPanels"
+             [name]="panel"
+             >
+          </panel>
+    </card>
 </div>

@@ -1,22 +1,25 @@
-<ng-container class="profile_container">
+<ng-container>
+    <div class="profile_container">
     <!-- Блок отвечающий за иконку и имя пользователя -->
     <div>
-        <ng-content selector="icon"></ng-content>
+        <ng-content select="icon"></ng-content>
         <div>
             <h1>Райан Гослинг</h1>
             <p>ryan.gosling</p>
         </div>
     </div>
     <!-- Блок отвечающий за информацию о пользовател -->
-    <div>
+     <div>
          <p>Список навыков, который мы обсудили выше, — основа резюме, но не единственная его часть. Также можно рассказать о себе в классическом смысле — этот раздел можно добавить в сопроводительное письмо.</p>
-    </div>
+     </div>
         <!-- Блок отвечающий за панели -->
-    <div>
-        <ng-content selector="panels"></ng-content>
+     <div>
+        <ng-content select="panel"></ng-content>
+     </div>
+     <!-- Блок отвечающий за кнопки -->
+     <div>
+        <ng-content select="button"></ng-content>
+     </div>
     </div>
-    <!-- Блок отвечающий за кнопки -->
-    <div>
-        <ng-content selector="button"></ng-content>
-    </div>
+
 </ng-container>
