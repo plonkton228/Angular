@@ -1,14 +1,15 @@
-<div>
-    Hello Angular
+<div class="mainContainer">
+   
     <card>
          <icon 
          path="assets/rayn.png"
+         [classList]="_joinClass({mainClass: 'icon'})"
          >
          </icon>
      
           <panel
-          *ngFor="let panel of contentPanels"
-             [name]="panel"
+          *ngFor="let panels of contentPanels"
+             [name]="panels"
              >
           </panel>
     </card>

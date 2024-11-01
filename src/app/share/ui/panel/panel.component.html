@@ -1,3 +1,5 @@
-<ng-container *ngIf="name">
-  <div class="panel" [ngClass]="{'main': isMain}">{{name}}</div>
+<ng-container *ngIf="name && classList">
+  <div class="panel" 
+  [classList]="classList"
+  >{{name}}</div>
 </ng-container>

@@ -2,9 +2,10 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app/app.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { Card } from "./app/Card/card.component";
-import { Icon } from "./app/share/icon/icon.component";
-import { Panel } from "./app/share/panel/panel.component";
-
+import { Icon } from "./app/share/ui/icon/icon.component";
+import { Panel } from "./app/share/ui/panel/panel.component";
+import { classJoin } from "./app/share/lib/classJoin";
+import { JOIN_CLASS } from "./app/share/module/shareTokens";
 
 @NgModule({
     declarations: [
@@ -16,7 +17,9 @@ import { Panel } from "./app/share/panel/panel.component";
     imports: [
         BrowserModule
     ],
-    providers: [],
+    providers: [
+        {provide: JOIN_CLASS, useValue: classJoin}
+    ],
     bootstrap: [
         AppComponent
     ],

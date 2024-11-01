@@ -1,5 +1,15 @@
 import { Component, Input } from "@angular/core";
-import { IconInterface } from "./iconInterface";
+
+
+export interface IconInterface {
+  path: string,
+  classList: string,
+}
+
+export enum AdditinalStylesIcon {
+  ICON_PROFILE = 'icon_profile'
+}
+
 
 @Component({
     selector: 'icon',
@@ -8,7 +18,8 @@ import { IconInterface } from "./iconInterface";
 })
 export class Icon implements IconInterface {
     @Input() public path!: string; // Путь до картинки
-
+    @Input() public classList!: string; // Лист классов стилизации
+    
   constructor(
     ) {
     }

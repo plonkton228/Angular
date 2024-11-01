@@ -1,4 +1,7 @@
-import { Component, ComponentRef, ContentChild, ElementRef, TemplateRef, ViewChild } from "@angular/core";
+import { Component, ComponentRef, ContentChild, ElementRef, Inject, Injector, TemplateRef, ViewChild } from "@angular/core";
+import { JOIN_CLASS } from "./share/module/shareTokens";
+import { JoinClassFunc } from "./share/lib/classJoin";
+
 
 
 
@@ -9,9 +12,16 @@ import { Component, ComponentRef, ContentChild, ElementRef, TemplateRef, ViewChi
     
 })
 export class AppComponent{
+
     public contentPanels: Array<string> = ['js', 'css', 'Angular', 'React', 'html'];
-    constructor()
-    {};
+    public _joinClass!: JoinClassFunc;   
+
+    constructor(
+        @Inject(JOIN_CLASS) private joinClass: JoinClassFunc
+    )
+    {
+        this._joinClass = this.joinClass
+    };
 
     ngOnInit(){
     };

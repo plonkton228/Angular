@@ -3,9 +3,10 @@
     otherClasses?: Array<String>,
     booleanClasses?: Record<string, boolean>
 }
+export type JoinClassFunc = (args: ClassesStyle) => string;
 
-
-export const classJoin = (args: ClassesStyle): string => {
+export const classJoin: JoinClassFunc = (args: ClassesStyle): string => {
+    
    return [
     args.mainClass,
     ...args.otherClasses || [],
