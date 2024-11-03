@@ -1,5 +1,15 @@
 import { Component, Input } from "@angular/core";
-import { PanelInterface } from "./panelInterface";
+// Интрефейс для описания компонента
+export interface PanelInterface {
+    name: string,
+    isMain: boolean,
+    classList: string,
+ }
+
+// Список для добавления дополнительных классов к компоненту
+ export enum AdditinalStylesPanel {
+    MAIN = 'main'
+ }
 
 @Component({
     selector: 'panel',

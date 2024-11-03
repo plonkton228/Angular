@@ -1,11 +1,12 @@
 import { Component, Input } from "@angular/core";
 
-
+// Интрефейс для описания компонента
 export interface IconInterface {
   path: string,
   classList: string,
 }
 
+// Список для добавления дополнительных классов к компоненту
 export enum AdditinalStylesIcon {
   ICON_PROFILE = 'icon_profile'
 }

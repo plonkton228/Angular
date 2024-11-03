@@ -3,4 +3,17 @@
  justify-content: space-between;
  border: 1px solid #FFFFFF;
  padding: 24px;
+  div:nth-child(2)  {
+    flex-basis: 284px;
+    color: #FFFFFF !important;
+  }
+
+  div:nth-child(3)  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-self: self-start;
+    flex-basis: 200px;
+    gap: 10px;
+  }
 }

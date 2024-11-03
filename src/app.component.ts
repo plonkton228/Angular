@@ -4,8 +4,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { Card } from "./app/Card/card.component";
 import { Icon } from "./app/share/ui/icon/icon.component";
 import { Panel } from "./app/share/ui/panel/panel.component";
-import { classJoin } from "./app/share/lib/classJoin";
-import { JOIN_CLASS } from "./app/share/module/shareTokens";
+import { StyleAPI } from "./app/share/lib/StyleIAPI";
+import { ButtonCustom } from "./app/share/ui/button/button.component";
 
 @NgModule({
     declarations: [
@@ -13,12 +13,13 @@ import { JOIN_CLASS } from "./app/share/module/shareTokens";
         Card,
         Icon,
         Panel,
+        ButtonCustom,
     ],
     imports: [
         BrowserModule
     ],
     providers: [
-        {provide: JOIN_CLASS, useValue: classJoin}
+        StyleAPI
     ],
     bootstrap: [
         AppComponent

@@ -3,14 +3,26 @@
     <card>
          <icon 
          path="assets/rayn.png"
-         [classList]="_joinClass({mainClass: 'icon'})"
+         [classList]="this._joinClasses({mainClass: 'icon'})"
          >
          </icon>
      
           <panel
           *ngFor="let panels of contentPanels"
              [name]="panels"
+              [classList]="this._joinClasses({mainClass: 'panel'})"
              >
           </panel>
+          <button-custom
+           [name]="'Написать'"
+           [childSelect]="'icon'"
+           [classList]="this._joinClasses({mainClass: this._classesButton[0]})"
+          >
+           <icon
+           path="assets/telegram.png"
+           [classList]="this._joinClasses({mainClass: 'icon'})"
+           >
+           </icon>
+        </button-custom>
     </card>
 </div>
