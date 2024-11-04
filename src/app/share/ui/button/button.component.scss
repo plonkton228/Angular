@@ -1,9 +1,26 @@
-﻿.buttonProfileWide {
+﻿// Основные стили
+.buttonMain {
+    cursor: pointer;
+}
+.buttonProfileWide {
     display: flex;
     justify-content: space-between;
     flex-basis: 132px;
     background-color: #AE7AFF;
     padding: 10px 20px;
     color: #000000;
+    align-items: center;
+    height: 100%;
 
+}
+
+
+.buttonProfileNarrow {
+   padding: 14px;
+   border: 1px solid #AE7AFF;
+}
+
+// Дополнительные стили 
+.buttonAppColor {
+    background-color: #AE7AFF !important;
 }

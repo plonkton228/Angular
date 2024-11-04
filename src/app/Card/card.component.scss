@@ -3,6 +3,16 @@
  justify-content: space-between;
  border: 1px solid #FFFFFF;
  padding: 24px;
+ align-items: center;
+
+ div:nth-child(1)  {
+  display: flex;
+  align-items: center;
+  div {
+    margin-left: -5px;
+    padding: 20px;
+  }
+}
   div:nth-child(2)  {
     flex-basis: 284px;
     color: #FFFFFF !important;
@@ -12,8 +22,13 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    align-self: self-start;
     flex-basis: 200px;
+    gap: 10px;
+  }
+
+  div:nth-child(4)  {
+    display: flex;
+    flex-basis: 232px;
     gap: 10px;
   }
 }

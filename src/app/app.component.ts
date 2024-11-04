@@ -1,6 +1,6 @@
 import { Component, ComponentRef, ContentChild, ElementRef, Inject, Injector, TemplateRef, ViewChild } from "@angular/core";
-import { JoinClassFunc, StyleAPI } from "./share/lib/StyleIAPI";
-import { AdditinalStylesButton } from "./share/ui/button/button.component";
+import { JoinClassFunc, ReturnObjectClassesComponent, StyleAPI, StylesType } from "./share/lib/StyleIAPI";
+import { MainStylesButton } from "./share/ui/button/button.component";
 
 
 
@@ -16,15 +16,15 @@ export class AppComponent{
 
     public contentPanels: Array<string> = ['js', 'css', 'Angular', 'React', 'html'];
     public _joinClasses: JoinClassFunc;
-    public _classesButton: Array<AdditinalStylesButton> = [];
+    public _classesFromComponents
 
     constructor(
         private styleApi: StyleAPI
     )
     {
        this._joinClasses = styleApi.joinClasses;
-       this._classesButton.push(AdditinalStylesButton.BUTTON_PROFILE_WIDE)
-       
+       this._classesFromComponents = styleApi.getClassesFromComponent([MainStylesButton], ['button']) 
+       console.log(this._classesFromComponents, 'sdsd')
     };
 
     ngOnInit(){

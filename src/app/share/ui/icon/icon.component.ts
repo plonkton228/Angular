@@ -7,7 +7,7 @@ export interface IconInterface {
 }
 
 // Список для добавления дополнительных классов к компоненту
-export enum AdditinalStylesIcon {
+export enum MainStylesIcon {
   ICON_PROFILE = 'icon_profile'
 }
 

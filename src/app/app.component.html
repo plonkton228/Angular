@@ -1,22 +1,36 @@
 <div class="mainContainer">
    
     <card>
-         <icon 
+        <icon 
          path="assets/rayn.png"
          [classList]="this._joinClasses({mainClass: 'icon'})"
          >
-         </icon>
+        </icon>
      
-          <panel
+        <panel
           *ngFor="let panels of contentPanels"
              [name]="panels"
               [classList]="this._joinClasses({mainClass: 'panel'})"
              >
-          </panel>
-          <button-custom
+        </panel>
+
+        
+        <button-custom
+          [childSelect]="'icon'"
+          [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: []})"
+         >
+          <icon
+          path="assets/human.png"
+          [classList]="this._joinClasses({mainClass: 'icon'})"
+          >
+          </icon>
+       </button-custom>
+
+
+        <button-custom
            [name]="'Написать'"
            [childSelect]="'icon'"
-           [classList]="this._joinClasses({mainClass: this._classesButton[0]})"
+           [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: []})"
           >
            <icon
            path="assets/telegram.png"
@@ -24,5 +38,19 @@
            >
            </icon>
         </button-custom>
+
+
+        <button-custom
+        [childSelect]="'icon'"
+        [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: ['buttonAppColor'] })"
+       >
+        <icon
+        path="assets/link.png"
+        [classList]="this._joinClasses({mainClass: 'icon'})"
+        >
+        </icon>
+       </button-custom>
+
+
     </card>
 </div>

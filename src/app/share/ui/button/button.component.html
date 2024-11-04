@@ -1,7 +1,7 @@
 ﻿<ng-container *ngIf="classList">
   <div [classList]="classList">{{name || ''}} 
     <ng-container *ngIf="childSelect">
-        <ng-content select = "{{childSelect}}"></ng-content>
+        <ng-content [select] = "childSelect"></ng-content>
     </ng-container>
   </div>
 </ng-container>

@@ -8,8 +8,9 @@ export interface ButtonInterface {
   }
   
   // Список для добавления дополнительных классов к компоненту
-export enum AdditinalStylesButton {
-    BUTTON_PROFILE_WIDE = 'buttonProfileWide'
+export enum MainStylesButton {
+    BUTTON_PROFILE_WIDE = 'buttonProfileWide',
+    BUTTON_PROFILE_NARROW = 'buttonProfileNarrow',
   }
 
 @Component({
@@ -25,7 +26,13 @@ export class ButtonCustom implements ButtonInterface {
    @Input() public childSelect?: string | undefined;
 
    constructor(){
-
+        console.log(this.childSelect, 'child')
    }
+
+   ngOnInit(){
+    console.log(this.childSelect, 'child')
+  };
+
+
    
 }

@@ -7,7 +7,7 @@ export interface PanelInterface {
  }
 
 // Список для добавления дополнительных классов к компоненту
- export enum AdditinalStylesPanel {
+ export enum MainStylesPanel {
     MAIN = 'main'
  }
 
