@@ -1,0 +1,8 @@
+﻿{
+    "pre_build": {
+        "executor": "nx:run-commands",
+        "options": {
+            "command": "ts-node generateConfigProjectJson.ts"
+        }
+    }
+}
