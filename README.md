@@ -12,6 +12,10 @@
 
 
 ## Run tasks
+To first run project for your app, use:
+```sh
+ npm run pre-build
+```
 
 To run the dev server for your app, use:
 
