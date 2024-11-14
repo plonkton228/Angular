@@ -13,16 +13,18 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"],
+    "pre_build_package": ["{projectRoot}/projectConfigs", "{projectRoot}/.generateConfigProjectJson.ts"]
   },
   "nxCloudId": "6730d50b7aa55d0dadfdfe72",
   "targetDefaults": {
-    "@angular-devkit/build-angular:browser": {
+    "@nx/angular:webpack-browser": {
       "cache": true,
       "dependsOn": ["^pre_build", "^build"],
-      "inputs": ["production", "^production"]
+      "inputs": ["production", "^production"],
+      "outputs": ["{projectRoot}/dist/TikTok"]
     },
-    "@angular-devkit/build-angular:dev-server": {
+    "@nx/angular:webpack-server": {
       "cache": true,
       "dependsOn": ["^pre_build"],
       "inputs": ["default",  "^production"]
@@ -48,6 +50,11 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx:run-commands": {
+      "cache": true,
+      "inputs": ["pre_build_package"],
+      "outputs": ["${projectRoot}/.package.json"]
     }
   },
   "generators": {
