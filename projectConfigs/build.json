@@ -2,12 +2,6 @@
     "build": {
     "executor": "@nx/angular:webpack-browser",
     "outputs": ["{options.outputPath}"],
-    "dependsOn": [
-          {
-            "target": "pre_build",
-            "projects": "self"
-          }
-    ],
     "options": {
       "outputPath": "dist/TikTok",
       "index": "./src/index.html",
@@ -15,14 +9,14 @@
       "polyfills": ["zone.js"],
       "tsConfig": "tsconfig.app.json",
       "inlineStyleLanguage": "scss",
-      "assets": [
-        {
-          "glob": "**/*",
-          "input": "public"
-        }
-      ],
       "styles": ["./src/styles.scss"],
-      "scripts": []
+      "scripts": [],
+       "assets": [
+
+       ],
+      "customWebpackConfig": {
+        "path": "webpack.config.ts"
+      }
     },
     "configurations": {
       "production": {

@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "pre-build": "ts-node generateConfigProjectJson.ts",
-    "start": "nx serve",
-    "build": "nx build",
+    "start": "nx serve --verbose",
+    "build": "nx build --verbose",
     "test": "nx test"
   },
   "private": true,

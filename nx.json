@@ -20,14 +20,9 @@
   "targetDefaults": {
     "@nx/angular:webpack-browser": {
       "cache": true,
-      "dependsOn": ["^pre_build", "^build"],
+      "dependsOn": ["pre_build", "^build"],
       "inputs": ["production", "^production"],
       "outputs": ["{projectRoot}/dist/TikTok"]
-    },
-    "@nx/angular:webpack-server": {
-      "cache": true,
-      "dependsOn": ["^pre_build"],
-      "inputs": ["default",  "^production"]
     },
     "@nx/eslint:lint": {
       "cache": true,

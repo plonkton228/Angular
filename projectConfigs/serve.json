@@ -1,6 +1,6 @@
 ﻿{
   "serve": {
-      "executor": "@nx/angular:webpack-server",
+      "executor": "@nx/angular:dev-server",
       "dependsOn": [
         {
           "target": "pre_build",
@@ -9,16 +9,11 @@
       ],
       "configurations": {
         "production": {
-   
+          "buildTarget": "TikTok:build:production"
         },
         "development": {
-         
+          "buildTarget": "TikTok:build:development"
         }
-      },
-      "options": {
-        "main": "./src/main.ts",
-        "outputPath": "./dist/TikTok",
-        "tsConfig": "tsconfig.app.json"
       },
       "defaultConfiguration": "development"
     }
