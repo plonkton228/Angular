@@ -1,22 +1,19 @@
-﻿import {Configuration} from 'webpack'
-import { WebpackConfig } from "./ConfigWebpack/webpackConfig"
-import { TypesWebpackOptions } from './ConfigWebpack/types'
-import  path  from 'path'
-module.exports =  async (env: any): Promise<Configuration> => {
+﻿import { Target } from '@angular-devkit/architect';
+import { Configuration } from 'webpack';
 
-   const settings: TypesWebpackOptions = {
-      paths: {
-         entry: './src/main.ts',
-         resolvePath: './src',
-         distPath:  __dirname + '/dist',
-         tsConfigPath:  'tsconfig.app.json',
-         indexPath: './src/index.html',
-         stylePaths: [`'./src/styles.scss'`]
-      }
-   }
-    
-   return  new Promise((resolve,reject) => {
-      resolve(WebpackConfig(settings))
-   })
-}
+export default (
+  config: Configuration,
+  options: { tsConfig: string; [k: string]: any },
+  target: Target
+) => {
+  // Webpack configuration
+  console.log('config', config);
+  // Merged options from project.json -> targets -> build -> options
+  console.log('options', options);
+  // Angular target project
+  console.log('target', target);
 
+  return {
+    ...config,
+  };
+};
