@@ -21,7 +21,6 @@ type ListKeysStyles =  {
     panel: typeof MainStylesPanel
 
  };
- 
 
  // Интерфейс, использующий Mapped Type
 
@@ -43,6 +42,14 @@ export class StyleAPI {
     constructor(){
     };
 
+    // Лист стилей
+    public ListKey: ListKeysStyles = {
+        button: MainStylesButton,
+        icon: MainStylesIcon,
+        panel: MainStylesPanel
+      }
+       
+
    /** Метод для обьединения стилей 
     * 
     * @param args 
@@ -55,23 +62,5 @@ export class StyleAPI {
             ...Object.entries(args.booleanClasses || {}).filter(([_, value]) => value)
                 .map(([key]) => key)
         ].join(' ');
-    }
-
-    /** Метод для получения стилей компонентов
-    * 
-    * @param {classLists | key}
-    * @returns {ReturnObjectClassesComponent<T> | number}
-    */
-    public getClassesFromComponent<T>(classLists: Array<T>, key: Array<keyof ListKeysStyles>): ReturnObjectClassesComponent<T>  {
-        let resultObject: ReturnObjectClassesComponent<T> = Object.assign({});
-          if (classLists.length > 0) {
-            classLists.forEach((element: T, index: number) => {
-                
-                resultObject[key[index]] = element;
-            })
-           return resultObject;
-          }
-
-        return resultObject;
     }
 }

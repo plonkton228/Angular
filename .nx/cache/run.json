@@ -1,0 +1,32 @@
+{
+  "run": {
+    "command": "nx build --verbose",
+    "startTime": "2024-12-07T17:28:29.308Z",
+    "endTime": "2024-12-07T17:28:48.418Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "TikTok:pre_build",
+      "target": "pre_build",
+      "projectName": "TikTok",
+      "hash": "10635953376539018490",
+      "startTime": "2024-12-07T17:28:29.428Z",
+      "endTime": "2024-12-07T17:28:31.731Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "TikTok:build:production",
+      "target": "build",
+      "projectName": "TikTok",
+      "hash": "18076885535429295002",
+      "startTime": "2024-12-07T17:28:31.740Z",
+      "endTime": "2024-12-07T17:28:48.417Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

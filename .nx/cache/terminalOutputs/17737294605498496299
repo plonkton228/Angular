@@ -1,0 +1,183 @@
+- Generating browser application bundles (phase: setup)...
+config {
+  plugins: [
+    NamedChunksPlugin {},
+    OccurrencesPlugin { options: [36m[Object][39m },
+    DedupeModuleResolvePlugin { options: [36m[Object][39m, modules: Map(0) {} },
+    ProgressPlugin {
+      profile: [33mfalse[39m,
+      handler: [36m[Function: handler][39m,
+      modulesCount: [33m5000[39m,
+      dependenciesCount: [33m10000[39m,
+      showEntries: [33mtrue[39m,
+      showModules: [33mtrue[39m,
+      showDependencies: [33mtrue[39m,
+      showActiveModules: [33mfalse[39m,
+      percentBy: [90mundefined[39m
+    },
+    CommonJsUsageWarnPlugin {
+      options: [36m[Object][39m,
+      shownWarnings: Set(0) {},
+      allowedDependencies: Set(0) {}
+    },
+    DevToolsIgnorePlugin {},
+    SourceMapDevToolPlugin {
+      sourceMapFilename: [32m'[file].map'[39m,
+      sourceMappingURLComment: [32m'\n//# sourceMappingURL=[url]'[39m,
+      moduleFilenameTemplate: [32m'[resource-path]'[39m,
+      fallbackModuleFilenameTemplate: [32m'webpack://[namespace]/[resourcePath]?[hash]'[39m,
+      namespace: [32m''[39m,
+      options: [36m[Object][39m
+    },
+    WatchFilesLogsPlugin {},
+    AngularWebpackPlugin {
+      pluginOptions: [36m[Object][39m,
+      compilerCliModule: [90mundefined[39m,
+      watchMode: [90mundefined[39m,
+      ngtscNextProgram: [90mundefined[39m,
+      builder: [90mundefined[39m,
+      sourceFileCache: [90mundefined[39m,
+      webpackCache: [90mundefined[39m,
+      webpackCreateHash: [90mundefined[39m,
+      fileDependencies: Map(0) {},
+      requiredFilesToEmit: Set(0) {},
+      requiredFilesToEmitCache: Map(0) {},
+      fileEmitHistory: Map(0) {}
+    },
+    AnyComponentStyleBudgetChecker { budgets: [] },
+    StylesWebpackPlugin { options: [36m[Object][39m, compilation: [90mundefined[39m },
+    { apply: [36m[Function: apply][39m },
+    MiniCssExtractPlugin {
+      _sortedModulesCache: [36m[WeakMap][39m,
+      options: [36m[Object][39m,
+      runtimeOptions: [36m[Object][39m
+    },
+    SuppressExtractedTextChunksWebpackPlugin {}
+  ],
+  module: {
+    rules: [
+      [36m[Object][39m, [36m[Object][39m,
+      [36m[Object][39m, [36m[Object][39m,
+      [36m[Object][39m, [36m[Object][39m,
+      [36m[Object][39m, [36m[Object][39m,
+      [36m[Object][39m
+    ],
+    strictExportPresence: [33mtrue[39m,
+    parser: { javascript: [36m[Object][39m }
+  },
+  devServer: {
+    host: [32m'localhost'[39m,
+    port: [33m4200[39m,
+    headers: { [32m'Access-Control-Allow-Origin'[39m: [32m'*'[39m },
+    historyApiFallback: {
+      index: [32m'/index.html'[39m,
+      disableDotRule: [33mtrue[39m,
+      htmlAcceptHeaders: [36m[Array][39m,
+      rewrites: [36m[Array][39m
+    },
+    setupExitSignals: [33mfalse[39m,
+    compress: [33mfalse[39m,
+    static: [33mfalse[39m,
+    server: [32m'http'[39m,
+    allowedHosts: [90mundefined[39m,
+    devMiddleware: { publicPath: [32m'/'[39m, stats: [33mfalse[39m },
+    liveReload: [33mtrue[39m,
+    hot: [33mfalse[39m,
+    proxy: [90mundefined[39m,
+    webSocketServer: { options: [36m[Object][39m },
+    client: {
+      logging: [32m'info'[39m,
+      webSocketURL: [32m'auto://0.0.0.0:0/ng-cli-ws'[39m,
+      overlay: [36m[Object][39m
+    }
+  },
+  mode: [32m'development'[39m,
+  devtool: [33mfalse[39m,
+  target: [ [32m'web'[39m, [32m'es2015'[39m ],
+  profile: [33mfalse[39m,
+  resolve: {
+    roots: [ [32m'E:\\Web\\Angular\\Angular'[39m ],
+    extensions: [ [32m'.ts'[39m, [32m'.tsx'[39m, [32m'.mjs'[39m, [32m'.js'[39m ],
+    symlinks: [33mtrue[39m,
+    modules: [ [32m'E:/Web/Angular/Angular'[39m, [32m'node_modules'[39m ],
+    mainFields: [ [32m'es2020'[39m, [32m'es2015'[39m, [32m'browser'[39m, [32m'module'[39m, [32m'main'[39m ],
+    conditionNames: [ [32m'es2020'[39m, [32m'es2015'[39m, [32m'...'[39m ]
+  },
+  resolveLoader: { symlinks: [33mtrue[39m },
+  context: [32m'E:\\Web\\Angular\\Angular'[39m,
+  entry: {
+    main: [ [32m'E:\\Web\\Angular\\Angular\\src\\main.ts'[39m ],
+    polyfills: [ [32m'zone.js'[39m ]
+  },
+  externals: [],
+  output: {
+    uniqueName: [32m'TikTok'[39m,
+    hashFunction: [32m'xxhash64'[39m,
+    clean: [33mtrue[39m,
+    path: [32m'E:\\Web\\Angular\\Angular\\dist\\TikTok'[39m,
+    publicPath: [32m''[39m,
+    filename: [32m'[name].js'[39m,
+    chunkFilename: [32m'[name].js'[39m,
+    libraryTarget: [90mundefined[39m,
+    crossOriginLoading: [33mfalse[39m,
+    trustedTypes: [32m'angular#bundler'[39m,
+    scriptType: [32m'module'[39m
+  },
+  watch: [33mtrue[39m,
+  watchOptions: { poll: [90mundefined[39m, followSymlinks: [33mfalse[39m, ignored: [90mundefined[39m },
+  snapshot: { module: { hash: [33mfalse[39m } },
+  performance: { hints: [33mfalse[39m },
+  ignoreWarnings: [
+    [31m/Failed to parse source map from/[39m,
+    [31m/Add postcss as project dependency/[39m,
+    [31m/"@charset" must be the first rule in the file/[39m
+  ],
+  experiments: {
+    backCompat: [33mfalse[39m,
+    syncWebAssembly: [33mtrue[39m,
+    asyncWebAssembly: [33mtrue[39m,
+    topLevelAwait: [33mfalse[39m
+  },
+  infrastructureLogging: { debug: [33mtrue[39m, level: [32m'verbose'[39m },
+  stats: {
+    all: [33mfalse[39m,
+    colors: [33mfalse[39m,
+    hash: [33mtrue[39m,
+    timings: [33mtrue[39m,
+    chunks: [33mtrue[39m,
+    builtAt: [33mtrue[39m,
+    warnings: [33mtrue[39m,
+    errors: [33mtrue[39m,
+    assets: [33mtrue[39m,
+    cachedAssets: [33mtrue[39m,
+    ids: [33mtrue[39m,
+    entrypoints: [33mtrue[39m,
+    usedExports: [33mtrue[39m,
+    optimizationBailout: [33mtrue[39m,
+    reasons: [33mtrue[39m,
+    children: [33mtrue[39m,
+    version: [33mtrue[39m,
+    chunkModules: [33mtrue[39m,
+    errorDetails: [33mtrue[39m,
+    errorStack: [33mtrue[39m,
+    moduleTrace: [33mtrue[39m,
+    logging: [32m'verbose'[39m,
+    modulesSpace: [33mInfinity[39m
+  },
+  cache: {
+    type: [32m'filesystem'[39m,
+    profile: [33mtrue[39m,
+    cacheDirectory: [32m'E:\\Web\\Angular\\Angular\\.angular\\cache\\18.2.12\\angular-webpack'[39m,
+    maxMemoryGenerations: [33m1[39m,
+    name: [32m'15bd4bf986dd751239c501c188a0c6826a294eae'[39m
+  },
+  optimization: {
+    minimizer: [],
+    moduleIds: [32m'deterministic'[39m,
+    chunkIds: [32m'named'[39m,
+    emitOnErrors: [33mfalse[39m,
+    runtimeChunk: [32m'single'[39m,
+    splitChunks: { maxAsyncRequests: [33mInfinity[39m, cacheGroups: [36m[Object][39m }
+  },
+  node: [33mfalse[39m
+}

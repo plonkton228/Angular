@@ -1,6 +1,7 @@
-import { Component, ComponentRef, ContentChild, ElementRef, Inject, Injector, TemplateRef, ViewChild } from "@angular/core";
-import { JoinClassFunc, ReturnObjectClassesComponent, StyleAPI, StylesType } from "./share/lib/StyleIAPI";
-import { MainStylesButton } from "./share/ui/button/button.component";
+import { Component } from "@angular/core";
+import { JoinClassFunc,  StyleAPI } from "./share/lib/StyleIAPI";
+import { ProfileService } from "./share/lib/profile.service";
+
 
 
 
@@ -16,15 +17,19 @@ export class AppComponent{
 
     public contentPanels: Array<string> = ['js', 'css', 'Angular', 'React', 'html'];
     public _joinClasses: JoinClassFunc;
-    public _classesFromComponents
+    public _classesFromComponents;
+    public _profiles: any[] = [];
 
     constructor(
-        private styleApi: StyleAPI
+        private styleApi: StyleAPI,
+        private profileService: ProfileService,
     )
     {
        this._joinClasses = styleApi.joinClasses;
-       this._classesFromComponents = styleApi.getClassesFromComponent([MainStylesButton], ['button']) 
-       console.log(this._classesFromComponents, 'sdsd')
+       this._classesFromComponents = styleApi.ListKey;
+        profileService.getPostProfile()
+       .subscribe((profile) => this._profiles = profile);
+       
     };
 
     ngOnInit(){

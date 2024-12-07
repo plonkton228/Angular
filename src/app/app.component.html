@@ -17,7 +17,7 @@
         
         <button-custom
           [childSelect]="'icon'"
-          [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: []})"
+          [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: [_classesFromComponents.button.BUTTON_PROFILE_NARROW]})"
          >
           <icon
           path="assets/human.png"
@@ -30,7 +30,7 @@
         <button-custom
            [name]="'Написать'"
            [childSelect]="'icon'"
-           [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: []})"
+           [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: [_classesFromComponents.button.BUTTON_PROFILE_WIDE]})"
           >
            <icon
            path="assets/telegram.png"
@@ -42,7 +42,7 @@
 
         <button-custom
         [childSelect]="'icon'"
-        [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: ['buttonAppColor'] })"
+        [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: ['buttonAppColor', _classesFromComponents.button.BUTTON_PROFILE_NARROW] })"
        >
         <icon
         path="assets/link.png"
@@ -54,3 +54,7 @@
 
     </card>
 </div>
+
+<pre>
+   {{_profiles | json}}
+</pre>
