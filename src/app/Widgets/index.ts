@@ -1,0 +1,1 @@
+﻿export { Card } from './ui/Card/card.component'

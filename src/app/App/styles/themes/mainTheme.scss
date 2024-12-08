@@ -1,0 +1,24 @@
+﻿// Основные цвета приложения
+$main-color-background: #000000;
+$main-color-panel: #AE7AFF;
+$main-color-text: #FFFFFF;
+
+
+
+// Основной формат текста
+$font-size-main: 12px;
+$font-height-main: 0.8;
+$font-weight-main: 700;
+
+$font-main: $font-weight-main $font-size-main/$font-height-main 'JetBrains Mono';
+
+
+
+// Дополнительный формат текста
+$font-size-additional: 14px;
+$font-height-additional: 0.8;
+$font-weight-additional: 500;
+
+$font-additional: $font-weight-additional $font-size-main/$font-height-main 'JetBrains Mono';
+
+

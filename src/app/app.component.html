@@ -1,60 +1,9 @@
 <div class="mainContainer">
-   
-    <card>
-        <icon 
-         path="assets/rayn.png"
-         [classList]="this._joinClasses({mainClass: 'icon'})"
-         >
-        </icon>
-     
-        <panel
-          *ngFor="let panels of contentPanels"
-             [name]="panels"
-              [classList]="this._joinClasses({mainClass: 'panel'})"
-             >
-        </panel>
-
-        
-        <button-custom
-          [childSelect]="'icon'"
-          [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: [_classesFromComponents.button.BUTTON_PROFILE_NARROW]})"
-         >
-          <icon
-          path="assets/human.png"
-          [classList]="this._joinClasses({mainClass: 'icon'})"
-          >
-          </icon>
-       </button-custom>
-
-
-        <button-custom
-           [name]="'Написать'"
-           [childSelect]="'icon'"
-           [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: [_classesFromComponents.button.BUTTON_PROFILE_WIDE]})"
-          >
-           <icon
-           path="assets/telegram.png"
-           [classList]="this._joinClasses({mainClass: 'icon'})"
-           >
-           </icon>
-        </button-custom>
-
-
-        <button-custom
-        [childSelect]="'icon'"
-        [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: ['buttonAppColor', _classesFromComponents.button.BUTTON_PROFILE_NARROW] })"
-       >
-        <icon
-        path="assets/link.png"
-        [classList]="this._joinClasses({mainClass: 'icon'})"
-        >
-        </icon>
-       </button-custom>
-
-
-    </card>
+   <ng-container *ngIf="_profiles.length > 0">
+    <ng-container *ngFor="let profile of _profiles">
+      <card
+      [profile]="profile"
+      ></card>
+    </ng-container>
+   </ng-container>
 </div>
-
-<pre>
-   {{_profiles | json}}
-</pre>

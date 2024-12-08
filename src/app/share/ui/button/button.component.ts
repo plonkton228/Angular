@@ -26,11 +26,11 @@ export class ButtonCustom implements ButtonInterface {
    @Input() public childSelect?: string | undefined;
 
    constructor(){
-        console.log(this.childSelect, 'child')
+  
    }
 
    ngOnInit(){
-    console.log(this.childSelect, 'child')
+
   };
 
 

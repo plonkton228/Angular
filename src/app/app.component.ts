@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
-import { JoinClassFunc,  StyleAPI } from "./share/lib/StyleIAPI";
-import { ProfileService } from "./share/lib/profile.service";
-
+import { JoinClassFunc,  ListKeysStyles,  StyleAPI } from "app/share/lib/StyleIAPI";
+import { ProfileService } from "app/share/lib/profile.service";
 
 
 
@@ -14,10 +13,9 @@ import { ProfileService } from "./share/lib/profile.service";
     
 })
 export class AppComponent{
-
-    public contentPanels: Array<string> = ['js', 'css', 'Angular', 'React', 'html'];
     public _joinClasses: JoinClassFunc;
-    public _classesFromComponents;
+    public _classesFromComponents: ListKeysStyles;
+    public _apiService: ProfileService;
     public _profiles: any[] = [];
 
     constructor(
@@ -27,12 +25,12 @@ export class AppComponent{
     {
        this._joinClasses = styleApi.joinClasses;
        this._classesFromComponents = styleApi.ListKey;
-        profileService.getPostProfile()
-       .subscribe((profile) => this._profiles = profile);
-       
+       this._apiService = profileService
     };
 
     ngOnInit(){
+        this._apiService.getPostProfile()
+        .subscribe((profile) => this._profiles = profile);
     };
 
     ngAfterViewChecked() {

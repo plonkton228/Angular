@@ -1,8 +1,7 @@
 ﻿import { Injectable } from "@angular/core";
 import { AppModule } from "../../../app.component";
-import { MainStylesIcon } from "../ui/icon/icon.component";
-import { MainStylesButton } from "../ui/button/button.component";
-import { MainStylesPanel } from "../ui/panel/panel.component";
+import { MainStyleDescription, MainStylesButton, MainStylesIcon, MainStylesPanel } from "..";
+
 
 
 // Описание интрефейсов всех методов StyleAPI
@@ -15,10 +14,11 @@ interface ClassesStyle {
 }
 
 // Описание обьекта который возвращает метод getClassesFromComponent
-type ListKeysStyles =  {
+export type ListKeysStyles =  {
     button: typeof MainStylesButton,
     icon: typeof MainStylesIcon,
-    panel: typeof MainStylesPanel
+    panel: typeof MainStylesPanel,
+    description: typeof MainStyleDescription
 
  };
 
@@ -31,8 +31,7 @@ type ListKeysStyles =  {
  }
 
  
-export type StylesType = typeof MainStylesIcon | typeof MainStylesButton | typeof MainStylesPanel
-// Описание типов StyleAPI
+
 
 // Тип для метода joinClasses
 export type JoinClassFunc = (args: ClassesStyle) => string;
@@ -46,7 +45,8 @@ export class StyleAPI {
     public ListKey: ListKeysStyles = {
         button: MainStylesButton,
         icon: MainStylesIcon,
-        panel: MainStylesPanel
+        panel: MainStylesPanel,
+        description: MainStyleDescription
       }
        
 

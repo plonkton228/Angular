@@ -1,0 +1,83 @@
+<ng-container>
+    <div class="profile_container">
+        <div>
+          <icon 
+          [path]= "profile.avatarUrl | pipeUrl"
+          [classList]="this._joinClasses({mainClass: 'icon', otherClasses: [_listStyle.icon.ICON_PROFILE]})"
+          >
+         </icon>
+          <description 
+          [text]="profile.firstName"
+          [classList]="this._joinClasses({mainClass: 'mainDescription', otherClasses: [_listStyle.description.DESCRIPTIONH1]})">
+  
+          </description>
+
+          <description 
+          [text]="profile.lastName"
+          [classList]="this._joinClasses({mainClass: 'mainDescription' , otherClasses: [_listStyle.description.DESCRIPTIONH1]})">
+  
+          </description>
+
+          <description 
+          [text]="profile.username"
+          [classList]="this._joinClasses({mainClass: 'mainDescription' , otherClasses: [_listStyle.description.DESCRIPTIONP]})">
+  
+          </description>
+        </div>
+
+       <div>
+        <description 
+        [text]="profile.description"
+        [classList]="this._joinClasses({mainClass: 'mainDescription'})">
+
+        </description>
+       </div>
+        <div>
+          <panel
+          *ngFor="let panels of profile.stack"
+              [name]="panels"
+              [classList]="this._joinClasses({mainClass: 'panel'})"
+             >
+        </panel>
+        </div>
+        <div>
+          <button-custom
+          [childSelect]="'icon'"
+          [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: [_listStyle.button.BUTTON_PROFILE_NARROW]})"
+         >
+          <icon
+          path="assets/human.png"
+          [classList]="this._joinClasses({mainClass: 'icon'})"
+          >
+          </icon>
+       </button-custom>
+
+
+        <button-custom
+           [name]="'Написать'"
+           [childSelect]="'icon'"
+           [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: [_listStyle.button.BUTTON_PROFILE_WIDE]})"
+          >
+           <icon
+           path="assets/telegram.png"
+           [classList]="this._joinClasses({mainClass: 'icon'})"
+           >
+           </icon>
+        </button-custom>
+
+
+        <button-custom
+        [childSelect]="'icon'"
+        [classList]="this._joinClasses({mainClass: 'buttonMain' , otherClasses: ['buttonAppColor', _listStyle.button.BUTTON_PROFILE_NARROW] })"
+       >
+        <icon
+        path="assets/link.png"
+        [classList]="this._joinClasses({mainClass: 'icon'})"
+        >
+        </icon>
+       </button-custom>
+        </div>
+       
+    </div>
+
+</ng-container>

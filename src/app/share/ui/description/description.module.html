@@ -1,0 +1,23 @@
+﻿<!-- Вариант если есть textOption -->
+<ng-container *ngIf="textOption">
+
+ <ng-container> 
+    <p [classList]="classList">{{text}}</p>
+ </ng-container>
+
+ <ng-container> 
+    <h1 [classList]="classList">{{text}}</h1>
+ </ng-container>
+
+ <ng-container> 
+    <div [classList]="classList">{{text}}</div>
+ </ng-container>
+
+</ng-container>
+
+<!-- Вариант если есть textOption не предоставлен -->
+<ng-container *ngIf="!textOption">
+    <ng-container> 
+        <p [classList]="classList">{{text}}</p>
+     </ng-container>
+</ng-container>

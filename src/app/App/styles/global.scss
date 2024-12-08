@@ -1,7 +1,10 @@
+﻿@import 'mainTheme.scss';
 *,
 *::after,
 *::before,
 body {
+    font: $font-main;
     box-sizing: border-box;
     margin: 0;
+
 }

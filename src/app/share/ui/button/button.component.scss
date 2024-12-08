@@ -1,4 +1,6 @@
-﻿// Основные стили
+﻿@import 'mainTheme.scss';
+
+// Основные стили
 .buttonMain {
     cursor: pointer;
 }
@@ -6,9 +8,10 @@
     display: flex;
     justify-content: space-between;
     flex-basis: 132px;
-    background-color: #AE7AFF;
+    background-color: $main-color-panel;
     padding: 10px 20px;
     color: #000000;
+    font: $font-additional;
     align-items: center;
     height: 100%;
 
