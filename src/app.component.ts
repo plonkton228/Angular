@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "app/app.component";
 import { ButtonCustom, Description, Icon, Panel, PipeImageUrl, ProfileService, StyleAPI } from "app/share";
 import { Card } from "app/Widgets";
+import { Login } from "app/Widgets/ui/Login/login.component";
 
 @NgModule({
     declarations: [
@@ -14,6 +15,7 @@ import { Card } from "app/Widgets";
         ButtonCustom,
         Description,
         PipeImageUrl,
+        Login,
     ],
     imports: [
         BrowserModule,
