@@ -1,0 +1,5 @@
+﻿<ng-container *ngIf="_fields.length > 0">
+    <form [formGroup]="_form">
+        <formly-form [form]="_form" [fields]="_fields" [model]="model"></formly-form>
+    </form>
+</ng-container>

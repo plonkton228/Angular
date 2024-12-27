@@ -1,32 +1,33 @@
-﻿import { Element } from "@angular/compiler";
-import { Component, Type } from "@angular/core";
-import { Route,  } from "@angular/router";
+﻿import { Type } from "@angular/core";
+import { Route } from "@angular/router";
+import { Card } from "app/Widgets";
 import { Login } from "app/Widgets/ui/Login/login.component";
 
 
 
 export enum PathsElementRout  {
-   LOGIN = '/login',
-   POSTS = '/posts',
+   MAIN = 'main',
+   LOGIN = 'login',
 }
 interface ElementRouting {
     path: PathsElementRout,
-    element: Type<any>
+    component: Type<any>
 }
 
 const Routing: Record<PathsElementRout,  ElementRouting> = {
     [PathsElementRout.LOGIN]: {
         path: PathsElementRout.LOGIN,
-        element: Login
+        component: Login
     },
-    [PathsElementRout.POSTS]: {
-        path: PathsElementRout.POSTS,
-        element: Login
+    [PathsElementRout.MAIN]: {
+        path: PathsElementRout.MAIN,
+        component: Card
     }
 
 }
 
 export const Routs: Route[] = [
-    Routing["/login"],
-    Routing["/posts"]
-]
+    Routing[PathsElementRout.LOGIN],
+    Routing[PathsElementRout.MAIN],
+    {path: "**", redirectTo: PathsElementRout.MAIN}
+] 

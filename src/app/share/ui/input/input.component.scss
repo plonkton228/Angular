@@ -1,0 +1,16 @@
+﻿@import 'mainTheme.scss';
+
+.mainInput {
+    border: none;
+    outline: none;
+
+}
+
+.loginInput {
+    width: 440px;
+    margin-top: 40px;
+    height: 44px;
+    background-color: $main-color-background;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFFBF;
+}

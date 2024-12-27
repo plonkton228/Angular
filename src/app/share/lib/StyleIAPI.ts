@@ -1,6 +1,6 @@
 ﻿import { Injectable } from "@angular/core";
 import { AppModule } from "../../../app.component";
-import { MainStyleDescription, MainStylesButton, MainStylesIcon, MainStylesPanel } from "..";
+import { MainInputStyles, MainStyleDescription, MainStylesButton, MainStylesIcon, MainStylesPanel } from "..";
 
 
 
@@ -18,7 +18,8 @@ export type ListKeysStyles =  {
     button: typeof MainStylesButton,
     icon: typeof MainStylesIcon,
     panel: typeof MainStylesPanel,
-    description: typeof MainStyleDescription
+    description: typeof MainStyleDescription,
+    input: typeof MainInputStyles,
 
  };
 
@@ -46,7 +47,8 @@ export class StyleAPI {
         button: MainStylesButton,
         icon: MainStylesIcon,
         panel: MainStylesPanel,
-        description: MainStyleDescription
+        description: MainStyleDescription,
+        input: MainInputStyles,
       }
        
 

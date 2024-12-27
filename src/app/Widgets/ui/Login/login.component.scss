@@ -1,1 +1,33 @@
-﻿
+﻿@import 'mainTheme.scss';
+
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $additnal-color-background;
+
+}
+
+
+
+.login_container_window {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1112px;
+    width: 100%;
+    padding: 20px;
+    .login_container_left_content {
+        display: flex;
+        max-width: 440px;
+        width: 100%;
+
+    }
+
+
+    .login_container_right_content {
+        
+    }
+}
+

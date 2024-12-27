@@ -1,17 +1,21 @@
 ﻿import { Component, Input } from "@angular/core";
+import { FieldType } from "@ngx-formly/bootstrap/form-field";
 
-// Интрефейс для описания компонента
-export interface ButtonInterface {
-    classList: string,
-    name?: string,
-    childSelect?: string,
-  }
-  
   // Список для добавления дополнительных классов к компоненту
 export enum MainStylesButton {
     BUTTON_PROFILE_WIDE = 'buttonProfileWide',
     BUTTON_PROFILE_NARROW = 'buttonProfileNarrow',
   }
+
+
+  // Интрефейс для описания компонента
+export interface ButtonInterface {
+  classList: string,
+  name?: string,
+  childSelect?: string,
+  type?: MainStylesButton
+}
+
 
 @Component({
     selector: 'button-custom',
@@ -20,13 +24,14 @@ export enum MainStylesButton {
 
 })
 
-export class ButtonCustom implements ButtonInterface {
+export class ButtonCustom  extends FieldType implements ButtonInterface  {
    @Input() public classList!: string;
    @Input() public name?: string | undefined;
    @Input() public childSelect?: string | undefined;
-
+   @Input() public type?: MainStylesButton; 
+   
    constructor(){
-  
+     super();
    }
 
    ngOnInit(){
